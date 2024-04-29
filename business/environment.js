@@ -13,6 +13,13 @@ const getEnv = function (name, def) {
 class Environment {
 	static getEnv = getEnv;
 
+	static DB = {
+		Database: getEnv("EXAMPLE_DATABASE","example"),
+		Username: getEnv("EXAMPLE_USERNAME","root"),
+		Password: getEnv("EXAMPLE_PASSWORD","password"),
+		Host: getEnv("EXAMPLE_HOSTNAME","127.0.0.1")
+	};
+
 	static Cacher = {
 		RedisHost: getEnv("REDIS_HOST", "127.0.0.1"),
 		RedisPort: getEnv("REDIS_PORT", 6379),
